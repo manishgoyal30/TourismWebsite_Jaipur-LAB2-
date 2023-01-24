@@ -1,0 +1,30 @@
+body{
+    font: arial;
+    color: black;
+    size: 16px;
+}
+
+h1{
+    font:🇬🇪;
+    color: blue;
+    background-color: lightgrey ;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 1.6rem;
+    word-spacing: 2em;
+    text-align: center;
+}
+
+h2{
+    font: GE;
+    color: darkred;
+    size: 18px;
+    letter-spacing: 1.4em;
+}
+
+#item{
+    width: 100vw;
+    display: flex;       
+    margin-top: 10px;
+    margin-right: 5vw;
+}
