@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #content {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="collapseButton">Collapse/Expand</button>
+    <div id="content">
+    <ol>
+      <li type="number">Information Technology</li>
+      <li type="number">Web Technology</li>
+      <li type="number">Operating System</li>
+      <li type="number">Theory of Computation</li>
+      <li type="number">Software Engineering</li>
+    </ol>
+    </div>
+
+    <script>
+      document.getElementById("collapseButton").addEventListener("click", function() {
+        var content = document.getElementById("content");
+        if (content.style.display === "none") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

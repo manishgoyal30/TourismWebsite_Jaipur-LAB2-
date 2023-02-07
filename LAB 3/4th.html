@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encoder</title>
+</head>
+
+<body>
+    <div class="word">
+        <form name="entry" action="" method="GET">
+            Enter Text : <br>
+            <input type="text" name="inputbox" value=""><br>
+            <input type="button" name="button" value="Encode" onClick="encode(this.form)">
+            <div id="result">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        encodekey = "XYZABCDEFGHIJKLMNOPQRSTUVW";
+        result = "";
+
+        function encode(form) {
+            var upper = form.inputbox.value;
+            upper = upper.toUpperCase();
+            i = 0;
+            while (i < upper.length) {
+                fin = alphabet.indexOf(upper.charAt(i));
+                result = result + encodekey.charAt(fin);
+                i++;
+            }
+            document.getElementById("result").innerText = 'Text you entered : ' + upper+ '\nEncoded Text : ' + result;
+        }
+    </script>
+</body>
+</html>
+
